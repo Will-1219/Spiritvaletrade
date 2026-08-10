@@ -1,478 +1,424 @@
 {
   "meta": {
-    "source": "manual",
+    "source": "valepedia",
     "version_tag": "2026-08-10",
-    "fetched_at": "2026-08-10T03:00:53.086Z",
-    "record_count": 20,
+    "fetched_at": "2026-08-10T03:30:36.360Z",
+    "record_count": 31,
     "files": [
-      "cards.json",
       "gems.json",
-      "items.json"
+      "cards.json",
+      "equipments_payload/Broad_Sword.payload.json"
     ]
   },
   "diff": {
     "added": [
       {
-        "canonical_key": "CARD_NIGHT_FIEND",
+        "canonical_key": "GEM_FIREBOLT",
         "change_type": "NEW",
-        "new_hash": "068e694972e4316f",
+        "new_hash": "675687d1c880edc5",
         "new": {
-          "canonical_key": "CARD_NIGHT_FIEND",
-          "name_en": "Night Fiend Card",
-          "name_zh_tw": "夜魔卡片",
-          "category": "card",
-          "rarity": "rare",
-          "description": "Socketable card dropped by Night Fiend.",
-          "source": "manual",
+          "canonical_key": "GEM_FIREBOLT",
+          "name_en": "Firebolt Gem",
+          "name_zh_tw": "火彈寶石",
+          "category": "gem",
+          "description": "效果: 火箭術Firebolt傷害: + (2% × 精煉等級)SkillDamage",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/gems/Firebolt%20Gem",
           "needs_verification": true,
-          "attributes": [
-            {
-              "attribute_key": "AGI",
-              "value_num": 3,
-              "per_refine": false
-            },
-            {
-              "attribute_key": "CRITICAL_CHANCE",
-              "value_num": 2,
-              "per_refine": false
-            }
-          ],
-          "source_hash": "068e694972e4316f"
+          "attributes": [],
+          "source_hash": "675687d1c880edc5"
         }
       },
       {
-        "canonical_key": "CARD_STONEHIDE",
+        "canonical_key": "GEM_FIREBALL",
         "change_type": "NEW",
-        "new_hash": "803d0111050b38d1",
+        "new_hash": "f969f7199276d09c",
         "new": {
-          "canonical_key": "CARD_STONEHIDE",
-          "name_en": "Stonehide Card",
-          "name_zh_tw": "石膚卡片",
-          "category": "card",
-          "rarity": "common",
-          "source": "manual",
+          "canonical_key": "GEM_FIREBALL",
+          "name_en": "Fireball Gem",
+          "name_zh_tw": "火球寶石",
+          "category": "gem",
+          "description": "效果: 火球術Fireball傷害: + (2% × 精煉等級)SkillDamage火焰之壁Firewall傷害: + (2% × 精煉等級)SkillDamage",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/gems/Fireball%20Gem",
           "needs_verification": true,
-          "attributes": [
-            {
-              "attribute_key": "DEF",
-              "value_num": 10,
-              "per_refine": false
-            }
-          ],
-          "source_hash": "803d0111050b38d1"
+          "attributes": [],
+          "source_hash": "f969f7199276d09c"
         }
       },
       {
-        "canonical_key": "CARD_MARSH_WITCH",
+        "canonical_key": "GEM_THUNDERBOLT",
         "change_type": "NEW",
-        "new_hash": "c64d053bbed9560a",
+        "new_hash": "db11a326d74d6a71",
         "new": {
-          "canonical_key": "CARD_MARSH_WITCH",
-          "name_en": "Marsh Witch Card",
-          "name_zh_tw": "沼澤女巫卡片",
-          "category": "card",
-          "rarity": "epic",
-          "source": "manual",
+          "canonical_key": "GEM_THUNDERBOLT",
+          "name_en": "Thunderbolt Gem",
+          "name_zh_tw": "落雷寶石",
+          "category": "gem",
+          "description": "效果: 雷擊術Thunderbolt傷害: + (2% × 精煉等級)SkillDamage",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/gems/Thunderbolt%20Gem",
           "needs_verification": true,
-          "attributes": [
-            {
-              "attribute_key": "MATK",
-              "value_num": 15,
-              "per_refine": false
-            },
-            {
-              "attribute_key": "MAX_MP",
-              "value_num": 4,
-              "per_refine": false
-            }
-          ],
-          "source_hash": "c64d053bbed9560a"
+          "attributes": [],
+          "source_hash": "db11a326d74d6a71"
         }
       },
       {
-        "canonical_key": "CARD_BLOODTHORN",
+        "canonical_key": "GEM_THUNDER_STORM",
         "change_type": "NEW",
-        "new_hash": "1a409c8c31a885f6",
+        "new_hash": "fe6d8fdd80d22f05",
         "new": {
-          "canonical_key": "CARD_BLOODTHORN",
-          "name_en": "Bloodthorn Card",
-          "name_zh_tw": "血棘卡片",
-          "category": "card",
-          "rarity": "rare",
-          "source": "manual",
+          "canonical_key": "GEM_THUNDER_STORM",
+          "name_en": "Thunder Storm Gem",
+          "name_zh_tw": "雷暴寶石",
+          "category": "gem",
+          "description": "效果: 雷爆術ThunderStorm傷害: + (2% × 精煉等級)SkillDamage靜電力場ThunderField傷害: + (2% × 精煉等級)SkillDamage",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/gems/Thunder%20Storm%20Gem",
           "needs_verification": true,
-          "attributes": [
-            {
-              "attribute_key": "HEALTH_ON_HIT",
-              "value_num": 12,
-              "per_refine": false
-            }
-          ],
-          "source_hash": "1a409c8c31a885f6"
+          "attributes": [],
+          "source_hash": "fe6d8fdd80d22f05"
         }
       },
       {
-        "canonical_key": "CARD_GALE_HARPY",
+        "canonical_key": "GEM_ICEBOLT",
         "change_type": "NEW",
-        "new_hash": "c18da9c479a39d21",
+        "new_hash": "b175331b029e0a8b",
         "new": {
-          "canonical_key": "CARD_GALE_HARPY",
-          "name_en": "Gale Harpy Card",
-          "name_zh_tw": "疾風鷹身卡片",
-          "category": "card",
-          "rarity": "rare",
-          "source": "manual",
+          "canonical_key": "GEM_ICEBOLT",
+          "name_en": "Icebolt Gem",
+          "name_zh_tw": "冰彈寶石",
+          "category": "gem",
+          "description": "效果: 冰箭術Icebolt傷害: + (2% × 精煉等級)SkillDamage",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/gems/Icebolt%20Gem",
+          "needs_verification": true,
+          "attributes": [],
+          "source_hash": "b175331b029e0a8b"
+        }
+      },
+      {
+        "canonical_key": "GEM_ICE_SHARD",
+        "change_type": "NEW",
+        "new_hash": "acd70726cedd3fe8",
+        "new": {
+          "canonical_key": "GEM_ICE_SHARD",
+          "name_en": "Ice Shard Gem",
+          "name_zh_tw": "冰晶碎片寶石",
+          "category": "gem",
+          "description": "效果: 冰晶碎片IceShard傷害: + (2% × 精煉等級)SkillDamage",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/gems/Ice%20Shard%20Gem",
+          "needs_verification": true,
+          "attributes": [],
+          "source_hash": "acd70726cedd3fe8"
+        }
+      },
+      {
+        "canonical_key": "GEM_TEMPO",
+        "change_type": "NEW",
+        "new_hash": "80256675f0056914",
+        "new": {
+          "canonical_key": "GEM_TEMPO",
+          "name_en": "Tempo Gem",
+          "name_zh_tw": "節奏寶石",
+          "category": "gem",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/gems/Tempo%20Gem",
           "needs_verification": true,
           "attributes": [
             {
               "attribute_key": "ATTACK_SPEED",
               "value_num": 5,
               "per_refine": false
-            }
-          ],
-          "source_hash": "c18da9c479a39d21"
-        }
-      },
-      {
-        "canonical_key": "GEM_ECHO",
-        "change_type": "NEW",
-        "new_hash": "948d3bd2b19be400",
-        "new": {
-          "canonical_key": "GEM_ECHO",
-          "name_en": "Echo Gem",
-          "name_zh_tw": "回響寶石",
-          "category": "gem",
-          "rarity": "legendary",
-          "description": "Double Attack +3% per refine.",
-          "source": "manual",
-          "needs_verification": true,
-          "attributes": [
+            },
             {
-              "attribute_key": "DOUBLE_ATTACK",
-              "value_num": 3,
+              "attribute_key": "ATTACK_SPEED",
+              "value_num": 1,
               "per_refine": true
             }
           ],
-          "source_hash": "948d3bd2b19be400"
+          "source_hash": "80256675f0056914"
         }
       },
       {
-        "canonical_key": "GEM_VITAL",
+        "canonical_key": "GEM_EARTHBOLT",
         "change_type": "NEW",
-        "new_hash": "79caa17ff6aa1a8d",
+        "new_hash": "9430b7a8441a7206",
         "new": {
-          "canonical_key": "GEM_VITAL",
-          "name_en": "Vital Gem",
-          "name_zh_tw": "活力寶石",
+          "canonical_key": "GEM_EARTHBOLT",
+          "name_en": "Earthbolt Gem",
+          "name_zh_tw": "大地箭寶石",
           "category": "gem",
-          "rarity": "rare",
-          "source": "manual",
+          "description": "效果: 地震術Earthbolt傷害: + (2% × 精煉等級)SkillDamage",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/gems/Earthbolt%20Gem",
           "needs_verification": true,
-          "attributes": [
-            {
-              "attribute_key": "MAX_HP",
-              "value_num": 2,
-              "per_refine": true
-            }
-          ],
-          "source_hash": "79caa17ff6aa1a8d"
+          "attributes": [],
+          "source_hash": "9430b7a8441a7206"
         }
       },
       {
-        "canonical_key": "GEM_FURY",
+        "canonical_key": "GEM_EARTH_SPIKES",
         "change_type": "NEW",
-        "new_hash": "48ef46f1a57b8756",
+        "new_hash": "780de4afa5a19193",
         "new": {
-          "canonical_key": "GEM_FURY",
-          "name_en": "Fury Gem",
-          "name_zh_tw": "狂怒寶石",
+          "canonical_key": "GEM_EARTH_SPIKES",
+          "name_en": "Earth Spikes Gem",
+          "name_zh_tw": "大地尖刺寶石",
           "category": "gem",
-          "rarity": "epic",
-          "source": "manual",
+          "description": "效果: 崩裂術EarthSpikes傷害: + (2% × 精煉等級)SkillDamage",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/gems/Earth%20Spikes%20Gem",
+          "needs_verification": true,
+          "attributes": [],
+          "source_hash": "780de4afa5a19193"
+        }
+      },
+      {
+        "canonical_key": "GEM_SOUL_STRIKE",
+        "change_type": "NEW",
+        "new_hash": "ef79d2994ed65dca",
+        "new": {
+          "canonical_key": "GEM_SOUL_STRIKE",
+          "name_en": "Soul Strike Gem",
+          "name_zh_tw": "魂擊寶石",
+          "category": "gem",
+          "description": "效果: 聖靈召喚SoulStrike傷害: + (2% × 精煉等級)SkillDamage",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/gems/Soul%20Strike%20Gem",
+          "needs_verification": true,
+          "attributes": [],
+          "source_hash": "ef79d2994ed65dca"
+        }
+      },
+      {
+        "canonical_key": "GEM_HOLY_LIGHT",
+        "change_type": "NEW",
+        "new_hash": "45c4cbc751599258",
+        "new": {
+          "canonical_key": "GEM_HOLY_LIGHT",
+          "name_en": "Holy Light Gem",
+          "name_zh_tw": "聖光寶石",
+          "category": "gem",
+          "description": "效果: 神聖之光HolyLight傷害: + (2% × 精煉等級)SkillDamage",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/gems/Holy%20Light%20Gem",
+          "needs_verification": true,
+          "attributes": [],
+          "source_hash": "45c4cbc751599258"
+        }
+      },
+      {
+        "canonical_key": "GEM_FAN_FIRE",
+        "change_type": "NEW",
+        "new_hash": "4d3e306a5438d329",
+        "new": {
+          "canonical_key": "GEM_FAN_FIRE",
+          "name_en": "Fan Fire Gem",
+          "name_zh_tw": "扇形連射寶石",
+          "category": "gem",
+          "description": "效果: 扇形速射FanFire傷害: + (2% × 精煉等級)SkillDamage",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/gems/Fan%20Fire%20Gem",
+          "needs_verification": true,
+          "attributes": [],
+          "source_hash": "4d3e306a5438d329"
+        }
+      },
+      {
+        "canonical_key": "GEM_PIERCING_FLURRY",
+        "change_type": "NEW",
+        "new_hash": "65e3536b813d23c8",
+        "new": {
+          "canonical_key": "GEM_PIERCING_FLURRY",
+          "name_en": "Piercing Flurry Gem",
+          "name_zh_tw": "貫穿連擊寶石",
+          "category": "gem",
+          "description": "效果: 連刺攻擊SpearThrust傷害: + (2% × 精煉等級)SkillDamage",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/gems/Piercing%20Flurry%20Gem",
+          "needs_verification": true,
+          "attributes": [],
+          "source_hash": "65e3536b813d23c8"
+        }
+      },
+      {
+        "canonical_key": "GEM_AIR_CUTTER",
+        "change_type": "NEW",
+        "new_hash": "6290addf1f01a1a6",
+        "new": {
+          "canonical_key": "GEM_AIR_CUTTER",
+          "name_en": "Air Cutter Gem",
+          "name_zh_tw": "空氣刃寶石",
+          "category": "gem",
+          "description": "效果: 破空斬SpearSlice傷害: + (2% × 精煉等級)SkillDamage",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/gems/Air%20Cutter%20Gem",
+          "needs_verification": true,
+          "attributes": [],
+          "source_hash": "6290addf1f01a1a6"
+        }
+      },
+      {
+        "canonical_key": "GEM_AERIAL_SHOT",
+        "change_type": "NEW",
+        "new_hash": "92fda73eeb894a13",
+        "new": {
+          "canonical_key": "GEM_AERIAL_SHOT",
+          "name_en": "Aerial Shot Gem",
+          "name_zh_tw": "凌空射擊寶石",
+          "category": "gem",
+          "description": "效果: 空中射擊AerialShot傷害: + (2% × 精煉等級)SkillDamage",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/gems/Aerial%20Shot%20Gem",
+          "needs_verification": true,
+          "attributes": [],
+          "source_hash": "92fda73eeb894a13"
+        }
+      },
+      {
+        "canonical_key": "CARD_ABOMINATION",
+        "change_type": "NEW",
+        "new_hash": "5f8472cf914ed12a",
+        "new": {
+          "canonical_key": "CARD_ABOMINATION",
+          "name_en": "Abomination Card",
+          "name_zh_tw": "胸甲憎惡卡片",
+          "category": "card",
+          "subcategory": "chest",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/cards/Abomination",
           "needs_verification": true,
           "attributes": [
             {
               "attribute_key": "ATK",
-              "value_num": 8,
-              "per_refine": false
+              "value_num": 1,
+              "per_refine": true
+            },
+            {
+              "attribute_key": "DEF_PERCENT",
+              "value_num": -1,
+              "per_refine": true
             }
           ],
-          "source_hash": "48ef46f1a57b8756"
+          "source_hash": "5f8472cf914ed12a"
         }
       },
       {
-        "canonical_key": "GEM_MIND",
+        "canonical_key": "CARD_COSMIC_ENTITY",
         "change_type": "NEW",
-        "new_hash": "c43683741c5ed12b",
+        "new_hash": "183fe63259b274ea",
         "new": {
-          "canonical_key": "GEM_MIND",
-          "name_en": "Mind Gem",
-          "name_zh_tw": "心智寶石",
-          "category": "gem",
-          "rarity": "rare",
-          "source": "manual",
+          "canonical_key": "CARD_COSMIC_ENTITY",
+          "name_en": "Cosmic Entity Card",
+          "name_zh_tw": "頭飾宇宙異形卡片",
+          "category": "card",
+          "subcategory": "headgear",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/cards/Cosmic%20Entity",
           "needs_verification": true,
           "attributes": [
             {
-              "attribute_key": "INT",
-              "value_num": 3,
-              "per_refine": false
-            },
-            {
-              "attribute_key": "MATK",
-              "value_num": 6,
-              "per_refine": false
-            }
-          ],
-          "source_hash": "c43683741c5ed12b"
-        }
-      },
-      {
-        "canonical_key": "GEM_BULWARK",
-        "change_type": "NEW",
-        "new_hash": "3f092b7db0d2d106",
-        "new": {
-          "canonical_key": "GEM_BULWARK",
-          "name_en": "Bulwark Gem",
-          "name_zh_tw": "壁壘寶石",
-          "category": "gem",
-          "rarity": "epic",
-          "source": "manual",
-          "needs_verification": true,
-          "attributes": [
-            {
-              "attribute_key": "DEF",
-              "value_num": 12,
-              "per_refine": false
-            },
-            {
-              "attribute_key": "VULNERABILITY_IMMUNITY",
-              "value_text": "true",
-              "per_refine": false
-            }
-          ],
-          "source_hash": "3f092b7db0d2d106"
-        }
-      },
-      {
-        "canonical_key": "ITEM_TITANPLATE",
-        "change_type": "NEW",
-        "new_hash": "2bcc495a8e7fadf4",
-        "new": {
-          "canonical_key": "ITEM_TITANPLATE",
-          "name_en": "Titanplate",
-          "name_zh_tw": "泰坦重鎧",
-          "category": "equipment",
-          "subcategory": "armor",
-          "equipment_slot": "body",
-          "rarity": "epic",
-          "description": "Massive plate armor forged for vanguard fighters.",
-          "source": "manual",
-          "needs_verification": true,
-          "attributes": [
-            {
-              "attribute_key": "VIT",
-              "value_num": 12,
-              "per_refine": false
-            },
-            {
-              "attribute_key": "DEF",
-              "value_num": 85,
-              "per_refine": false
-            },
-            {
-              "attribute_key": "MAX_HP",
-              "value_num": 8,
-              "per_refine": false
-            }
-          ],
-          "source_hash": "2bcc495a8e7fadf4"
-        }
-      },
-      {
-        "canonical_key": "ITEM_DUSKFANG_SABER",
-        "change_type": "NEW",
-        "new_hash": "25fc569a295d4b96",
-        "new": {
-          "canonical_key": "ITEM_DUSKFANG_SABER",
-          "name_en": "Duskfang Saber",
-          "name_zh_tw": "暮牙軍刀",
-          "category": "equipment",
-          "subcategory": "weapon",
-          "equipment_slot": "weapon",
-          "rarity": "rare",
-          "description": "A curved blade that hums at twilight.",
-          "source": "manual",
-          "needs_verification": true,
-          "attributes": [
-            {
-              "attribute_key": "ATK",
-              "value_num": 120,
-              "per_refine": false
-            },
-            {
-              "attribute_key": "AGI",
-              "value_num": 6,
-              "per_refine": false
-            },
-            {
-              "attribute_key": "CRITICAL_CHANCE",
-              "value_num": 4,
-              "per_refine": false
-            }
-          ],
-          "source_hash": "25fc569a295d4b96"
-        }
-      },
-      {
-        "canonical_key": "ITEM_WARDWEAVE_ROBE",
-        "change_type": "NEW",
-        "new_hash": "2da209da5284c7cb",
-        "new": {
-          "canonical_key": "ITEM_WARDWEAVE_ROBE",
-          "name_en": "Wardweave Robe",
-          "name_zh_tw": "護紋法袍",
-          "category": "equipment",
-          "subcategory": "armor",
-          "equipment_slot": "body",
-          "rarity": "rare",
-          "source": "manual",
-          "needs_verification": true,
-          "attributes": [
-            {
-              "attribute_key": "INT",
+              "attribute_key": "MATK_PERCENT",
               "value_num": 10,
               "per_refine": false
             },
             {
-              "attribute_key": "MDEF",
-              "value_num": 40,
+              "attribute_key": "ATK_PERCENT",
+              "value_num": 10,
+              "per_refine": false
+            },
+            {
+              "attribute_key": "MAX_HP",
+              "value_num": -25,
               "per_refine": false
             },
             {
               "attribute_key": "MAX_MP",
-              "value_num": 6,
+              "value_num": -25,
               "per_refine": false
             }
           ],
-          "source_hash": "2da209da5284c7cb"
+          "source_hash": "183fe63259b274ea"
         }
       },
       {
-        "canonical_key": "ITEM_EMBERGUARD_SHIELD",
+        "canonical_key": "CARD_CHOMPROOT",
         "change_type": "NEW",
-        "new_hash": "664ba3387353dac4",
+        "new_hash": "78857be7013881ee",
         "new": {
-          "canonical_key": "ITEM_EMBERGUARD_SHIELD",
-          "name_en": "Emberguard Shield",
-          "name_zh_tw": "燼護盾",
-          "category": "equipment",
-          "subcategory": "shield",
-          "equipment_slot": "offhand",
-          "rarity": "epic",
-          "source": "manual",
-          "needs_verification": true,
-          "attributes": [
-            {
-              "attribute_key": "DEF",
-              "value_num": 60,
-              "per_refine": false
-            },
-            {
-              "attribute_key": "FIRE_RESISTANCE",
-              "value_num": 15,
-              "per_refine": false
-            },
-            {
-              "attribute_key": "REFLECT_DAMAGE",
-              "value_num": 5,
-              "per_refine": false
-            }
-          ],
-          "source_hash": "664ba3387353dac4"
-        }
-      },
-      {
-        "canonical_key": "ITEM_SWIFTSTEP_BOOTS",
-        "change_type": "NEW",
-        "new_hash": "557b03a6e442cec1",
-        "new": {
-          "canonical_key": "ITEM_SWIFTSTEP_BOOTS",
-          "name_en": "Swiftstep Boots",
-          "name_zh_tw": "疾行之靴",
-          "category": "equipment",
+          "canonical_key": "CARD_CHOMPROOT",
+          "name_en": "Chomproot Card",
+          "name_zh_tw": "鞋子咬人根卡片",
+          "category": "card",
           "subcategory": "boots",
-          "equipment_slot": "feet",
-          "rarity": "common",
-          "source": "manual",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/cards/Chomproot",
           "needs_verification": true,
           "attributes": [
             {
-              "attribute_key": "MOVEMENT_SPEED",
-              "value_num": 10,
-              "per_refine": false
-            },
-            {
-              "attribute_key": "AGI",
-              "value_num": 4,
+              "attribute_key": "BLEED_IMMUNITY",
+              "value_text": "true",
               "per_refine": false
             }
           ],
-          "source_hash": "557b03a6e442cec1"
+          "source_hash": "78857be7013881ee"
         }
       },
       {
-        "canonical_key": "ITEM_OATH_RING",
+        "canonical_key": "CARD_VOIDSPAWN",
         "change_type": "NEW",
-        "new_hash": "f18d3b47ed472f62",
+        "new_hash": "79a205de731168b1",
         "new": {
-          "canonical_key": "ITEM_OATH_RING",
-          "name_en": "Oath Ring",
-          "name_zh_tw": "誓約之戒",
-          "category": "equipment",
-          "subcategory": "accessory",
-          "equipment_slot": "ring",
-          "rarity": "rare",
-          "source": "manual",
+          "canonical_key": "CARD_VOIDSPAWN",
+          "name_en": "Voidspawn Card",
+          "name_zh_tw": "頭飾虛空生物卡片",
+          "category": "card",
+          "subcategory": "headgear",
+          "description": "效果: 授予 Lv.1 真視之眼",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/cards/Voidspawn",
           "needs_verification": true,
-          "attributes": [
-            {
-              "attribute_key": "STR",
-              "value_num": 5,
-              "per_refine": false
-            },
-            {
-              "attribute_key": "VIT",
-              "value_num": 5,
-              "per_refine": false
-            }
-          ],
-          "source_hash": "f18d3b47ed472f62"
+          "attributes": [],
+          "source_hash": "79a205de731168b1"
         }
       },
       {
-        "canonical_key": "ITEM_SANCTIFIED_HELM",
+        "canonical_key": "CARD_VOIDGAZER",
         "change_type": "NEW",
-        "new_hash": "a7a90341a5ff1aac",
+        "new_hash": "aea9a9d6a9054acf",
         "new": {
-          "canonical_key": "ITEM_SANCTIFIED_HELM",
-          "name_en": "Sanctified Helm",
-          "name_zh_tw": "聖化頭盔",
-          "category": "equipment",
-          "subcategory": "helmet",
-          "equipment_slot": "head",
-          "rarity": "epic",
-          "source": "manual",
+          "canonical_key": "CARD_VOIDGAZER",
+          "name_en": "Voidgazer Card",
+          "name_zh_tw": "頭飾虛空魔眼卡片",
+          "category": "card",
+          "subcategory": "headgear",
+          "description": "效果: 施法無法被中斷",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/cards/Voidgazer",
+          "needs_verification": true,
+          "attributes": [],
+          "source_hash": "aea9a9d6a9054acf"
+        }
+      },
+      {
+        "canonical_key": "CARD_CHOMPBLOOM",
+        "change_type": "NEW",
+        "new_hash": "048ab72839b3fbf7",
+        "new": {
+          "canonical_key": "CARD_CHOMPBLOOM",
+          "name_en": "Chompbloom Card",
+          "name_zh_tw": "盾牌咬人花卡片",
+          "category": "card",
+          "subcategory": "shield",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/cards/Chompbloom",
           "needs_verification": true,
           "attributes": [
             {
-              "attribute_key": "HOLY_RESISTANCE",
-              "value_num": 12,
-              "per_refine": false
-            },
-            {
-              "attribute_key": "DEF",
-              "value_num": 30,
+              "attribute_key": "SLOW_IMMUNITY",
+              "value_text": "true",
               "per_refine": false
             },
             {
@@ -481,70 +427,268 @@
               "per_refine": false
             }
           ],
-          "source_hash": "a7a90341a5ff1aac"
+          "source_hash": "048ab72839b3fbf7"
         }
       },
       {
-        "canonical_key": "MATERIAL_SPIRIT_ORE",
+        "canonical_key": "CARD_CINDERSPIKE",
         "change_type": "NEW",
-        "new_hash": "718b2ae3d08124f3",
+        "new_hash": "8133f844c6c4a4ee",
         "new": {
-          "canonical_key": "MATERIAL_SPIRIT_ORE",
-          "name_en": "Spirit Ore",
-          "name_zh_tw": "靈礦石",
-          "category": "material",
-          "subcategory": "ore",
-          "description": "Refining material.",
-          "source": "manual",
-          "needs_verification": true,
-          "attributes": [],
-          "source_hash": "718b2ae3d08124f3"
-        }
-      },
-      {
-        "canonical_key": "CONSUMABLE_VALE_ELIXIR",
-        "change_type": "NEW",
-        "new_hash": "39e623950b87ea97",
-        "new": {
-          "canonical_key": "CONSUMABLE_VALE_ELIXIR",
-          "name_en": "Vale Elixir",
-          "name_zh_tw": "靈谷藥劑",
-          "category": "consumable",
-          "subcategory": "potion",
-          "description": "Restores HP over time.",
-          "source": "manual",
-          "needs_verification": true,
-          "attributes": [],
-          "source_hash": "39e623950b87ea97"
-        }
-      },
-      {
-        "canonical_key": "ITEM_ECHO_PENDANT",
-        "change_type": "NEW",
-        "new_hash": "1b6d11f16c346a03",
-        "new": {
-          "canonical_key": "ITEM_ECHO_PENDANT",
-          "name_en": "Echo Pendant",
-          "name_zh_tw": "回響墜飾",
-          "category": "equipment",
+          "canonical_key": "CARD_CINDERSPIKE",
+          "name_en": "Cinderspike Card",
+          "name_zh_tw": "飾品餘燼尖刺卡片",
+          "category": "card",
           "subcategory": "accessory",
-          "equipment_slot": "necklace",
-          "rarity": "legendary",
-          "source": "manual",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/cards/Cinderspike",
           "needs_verification": true,
           "attributes": [
             {
-              "attribute_key": "DOUBLE_ATTACK",
+              "attribute_key": "REFLECT_DAMAGE",
               "value_num": 5,
               "per_refine": false
-            },
+            }
+          ],
+          "source_hash": "8133f844c6c4a4ee"
+        }
+      },
+      {
+        "canonical_key": "CARD_LITTLE_STAR",
+        "change_type": "NEW",
+        "new_hash": "38b97dcbe9c908c5",
+        "new": {
+          "canonical_key": "CARD_LITTLE_STAR",
+          "name_en": "Little Star Card",
+          "name_zh_tw": "飾品小星星卡片",
+          "category": "card",
+          "subcategory": "accessory",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/cards/Little%20Star",
+          "needs_verification": true,
+          "attributes": [
             {
-              "attribute_key": "ATTACK_SPEED",
+              "attribute_key": "HOLY_DAMAGE",
               "value_num": 6,
               "per_refine": false
             }
           ],
-          "source_hash": "1b6d11f16c346a03"
+          "source_hash": "38b97dcbe9c908c5"
+        }
+      },
+      {
+        "canonical_key": "CARD_TWINKLE",
+        "change_type": "NEW",
+        "new_hash": "b7ce896b0c38d0c4",
+        "new": {
+          "canonical_key": "CARD_TWINKLE",
+          "name_en": "Twinkle Card",
+          "name_zh_tw": "飾品閃爍光靈卡片",
+          "category": "card",
+          "subcategory": "accessory",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/cards/Twinkle",
+          "needs_verification": true,
+          "attributes": [
+            {
+              "attribute_key": "HEAL_POWER",
+              "value_num": 10,
+              "per_refine": false
+            }
+          ],
+          "source_hash": "b7ce896b0c38d0c4"
+        }
+      },
+      {
+        "canonical_key": "CARD_CINDERWHEEL",
+        "change_type": "NEW",
+        "new_hash": "df5dd25d538687f1",
+        "new": {
+          "canonical_key": "CARD_CINDERWHEEL",
+          "name_en": "Cinderwheel Card",
+          "name_zh_tw": "頭飾餘燼輪卡片",
+          "category": "card",
+          "subcategory": "headgear",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/cards/Cinderwheel",
+          "needs_verification": true,
+          "attributes": [
+            {
+              "attribute_key": "STUN_IMMUNITY",
+              "value_text": "true",
+              "per_refine": false
+            },
+            {
+              "attribute_key": "MAX_MP",
+              "value_num": -25,
+              "per_refine": false
+            }
+          ],
+          "source_hash": "df5dd25d538687f1"
+        }
+      },
+      {
+        "canonical_key": "CARD_CINDERMAW",
+        "change_type": "NEW",
+        "new_hash": "5a38e5779df5ebff",
+        "new": {
+          "canonical_key": "CARD_CINDERMAW",
+          "name_en": "Cindermaw Card",
+          "name_zh_tw": "胸甲餘燼巨口卡片",
+          "category": "card",
+          "subcategory": "chest",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/cards/Cindermaw",
+          "needs_verification": true,
+          "attributes": [
+            {
+              "attribute_key": "KNOCKBACK_IMMUNITY",
+              "value_text": "true",
+              "per_refine": false
+            }
+          ],
+          "source_hash": "5a38e5779df5ebff"
+        }
+      },
+      {
+        "canonical_key": "CARD_ANGEL",
+        "change_type": "NEW",
+        "new_hash": "5158cf84a5a89c4c",
+        "new": {
+          "canonical_key": "CARD_ANGEL",
+          "name_en": "Angel Card",
+          "name_zh_tw": "武器天使卡片",
+          "category": "card",
+          "subcategory": "weapon",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/cards/Angel",
+          "needs_verification": true,
+          "attributes": [
+            {
+              "attribute_key": "HOLY_DAMAGE",
+              "value_num": 6,
+              "per_refine": false
+            }
+          ],
+          "source_hash": "5158cf84a5a89c4c"
+        }
+      },
+      {
+        "canonical_key": "CARD_SERAPHIM_ARBITER",
+        "change_type": "NEW",
+        "new_hash": "9e35f542381c3c56",
+        "new": {
+          "canonical_key": "CARD_SERAPHIM_ARBITER",
+          "name_en": "Seraphim Arbiter Card",
+          "name_zh_tw": "胸甲熾天使裁決者卡片",
+          "category": "card",
+          "subcategory": "chest",
+          "description": "效果: 轉換為聖屬性",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/cards/Seraphim%20Arbiter",
+          "needs_verification": true,
+          "attributes": [],
+          "source_hash": "9e35f542381c3c56"
+        }
+      },
+      {
+        "canonical_key": "CARD_ARCHANGEL",
+        "change_type": "NEW",
+        "new_hash": "addc75f6a00231e7",
+        "new": {
+          "canonical_key": "CARD_ARCHANGEL",
+          "name_en": "Archangel Card",
+          "name_zh_tw": "盾牌大天使卡片",
+          "category": "card",
+          "subcategory": "shield",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/cards/Archangel",
+          "needs_verification": true,
+          "attributes": [
+            {
+              "attribute_key": "HOLY_RESISTANCE",
+              "value_num": 25,
+              "per_refine": false
+            }
+          ],
+          "source_hash": "addc75f6a00231e7"
+        }
+      },
+      {
+        "canonical_key": "CARD_BAT",
+        "change_type": "NEW",
+        "new_hash": "efe993c4624bcfbe",
+        "new": {
+          "canonical_key": "CARD_BAT",
+          "name_en": "Bat Card",
+          "name_zh_tw": "飾品蝙蝠卡片",
+          "category": "card",
+          "subcategory": "accessory",
+          "source": "valepedia",
+          "source_url": "https://www.valepedia.com/database/cards/Bat",
+          "needs_verification": true,
+          "attributes": [
+            {
+              "attribute_key": "MP_ON_KILL",
+              "value_num": 10,
+              "per_refine": false
+            }
+          ],
+          "source_hash": "efe993c4624bcfbe"
+        }
+      },
+      {
+        "canonical_key": "ITEM_BROAD_SWORD",
+        "change_type": "NEW",
+        "new_hash": "157fc330f03d2764",
+        "new": {
+          "canonical_key": "ITEM_BROAD_SWORD",
+          "name_en": "Broad Sword",
+          "category": "equipment",
+          "equipment_slot": "weapon",
+          "description": "element: neutral",
+          "source": "valepedia",
+          "source_external_id": "Broad Sword",
+          "source_url": "https://www.valepedia.com/database/equipments/Broad%20Sword",
+          "needs_verification": true,
+          "attributes": [
+            {
+              "attribute_key": "ATK",
+              "value_num": 20,
+              "per_refine": false
+            },
+            {
+              "attribute_key": "ATK",
+              "value_num": 2,
+              "per_refine": true
+            },
+            {
+              "attribute_key": "BLOCK",
+              "value_num": 10,
+              "per_refine": false
+            },
+            {
+              "attribute_key": "MAX_HP_FLAT",
+              "value_num": 100,
+              "per_refine": false
+            },
+            {
+              "attribute_key": "MAX_HP",
+              "value_num": 10,
+              "per_refine": false
+            },
+            {
+              "attribute_key": "ATTACK_SPEED",
+              "value_num": -10,
+              "per_refine": false
+            },
+            {
+              "attribute_key": "SOCKETS",
+              "value_num": 3,
+              "per_refine": false
+            }
+          ],
+          "source_hash": "157fc330f03d2764"
         }
       }
     ],

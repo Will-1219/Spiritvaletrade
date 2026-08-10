@@ -1,6 +1,39 @@
-# REFERENCE_SOURCE_REPORT.md — spiritvalemarket.com 調查報告
+# REFERENCE_SOURCE_REPORT.md — Reference Source 調查報告
 
-調查日期：2026-08-10。方法：一般公開 HTTP 存取（WebFetch）+ robots.txt / sitemap / 公開頁面檢視。未 bypass 任何驗證、rate limit 或防護；未存取非公開 endpoint。
+調查日期：2026-08-10（同日補充 spiritvalers.com 與 valepedia.com）。方法：一般公開 HTTP 存取 + 真實瀏覽器（Claude in Chrome）觀察公開 network requests。未 bypass 任何驗證、rate limit 或防護；未存取非公開 endpoint。
+
+## 總結（三站比較）
+
+| | spiritvalemarket.com | spiritvalers.com | **valepedia.com（推薦）** |
+|---|---|---|---|
+| 型態 | SPA + 靜態 bundle | SPA（hash routing） | Nuxt prerendered（SSR + payload JSON） |
+| ToS | 無 | **有，禁止 mass-scrape** | 無 |
+| robots.txt | 全開放 | 全開放 | 全開放 |
+| 公開結構化資料 | bundle URL 未定位 | 未調查（ToS 已排除） | ✅ `_payload.json` + 版本化 |
+| 雙語 en/zh-TW | 部分 | 否（英文為主） | ✅（實為 17 語言） |
+| 結論 | 保留觀察 | **不可用（bulk）** | **主要 reference source 候選** |
+
+## valepedia.com（2026-08-10 新增，主要發現）
+
+- **技術架構**：Nuxt 3 prerendered。每個 equipment 詳頁有公開結構化 endpoint：`/database/equipments/<EnglishName>/_payload.json`（devalue 編碼、~2KB、含 schema + tuple：archetypes、characterBound、descriptions(17 語言)、dropChance、element、id、levelRequired、materialId、names、primaryStats、secondaryStats、set、slots(插槽數)、spriteId、substats、type、unique）。stats 內建精煉係數（例 Broad Sword：`Attack +20 +2×refine`、`Block +10%`、`HP +100 & +10%`、`AtkSpd -10%`、3 插槽）。
+- **遊戲版本化**：`/versions/index.json` → `["0.30.7","0.30.8","0.30.10"]`，站方追蹤跨版本資料 → 與 ValeTrade ReferenceVersion/diff 設計完美對齊。
+- **Cards/Gems**：詳頁/列表為 server-rendered HTML（易 parse）；完整資料集與各語言名稱表打包在 `_nuxt/*.js` chunks。
+- **規模**：Equipment 576、Cards 327、Gems 129、Grimoires 71、Artifacts 45、Monsters 330、Maps 58、Skills 390、狀態效果 185。
+- **Crawl 成本**：全 catalog ≈ 1,100 詳頁 × ~2KB，1 req/s 一次性 ≈ 20 分鐘，每遊戲版本一次。對站點負載趨近於零。
+- **法律**：無 ToS/授權聲明（狀態同 spiritvalemarket）；描述與圖為遊戲內容 © 開發商。策略：只取 factual stats + 名稱（en/zh-TW，OCR 詞庫必需），不搬運描述全文/圖片。
+- **POC 已完成**：31 筆（15 gems + 15 cards + Broad Sword full detail）經 ValepediaSourceAdapter（devalue decoder + zh-TW effect parser）→ pipeline 全綠。
+
+## spiritvalers.com（2026-08-10 新增）
+
+粉絲站，資料「extracted from the game client」（版權屬遊戲開發商）。**ToS 明文禁止 mass-scrape** → bulk import PROHIBITED，不建 adapter。有 Discord 社群。價值：確認遊戲資料本源是 client data files。
+
+## 官方資料現況
+
+SpiritVale **沒有公開官方 API**（spiritvalemarket 亦在等待）。「官方完整資料」目前只存在於遊戲客戶端檔案內——依專案規則（禁止侵入式 reverse engineering）不採用。故短期最佳路徑：valepedia（結構化、版本化、雙語）為主 + 玩家 F8 capture 實測資料自我修正；官方 API 出現後切換 FutureOfficialSourceAdapter。
+
+---
+
+# 附錄：spiritvalemarket.com 原始調查（2026-08-10 上午）
 
 ## Observed architecture
 

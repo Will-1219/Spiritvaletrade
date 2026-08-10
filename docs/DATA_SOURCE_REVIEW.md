@@ -4,6 +4,8 @@
 |---|---|---|---|---|---|---|
 | SpiritValeMarket | https://spiritvalemarket.com | Items / Equipment / Cards / Gems / Materials / Monsters / Drops / Maps / stats | 公開 HTTP（SPA 靜態 bundle，實際 endpoint 待瀏覽器確認） | **UNCLEAR** — 無 ToS、無授權聲明；robots.txt 全開放但不等於資料轉載授權；粉絲站（站長 Discord: LessFluff） | **BULK IMPORT DISABLED**（feature flag `SPIRITVALEMARKET_BULK_IMPORT=false`）。僅允許人工少量查證。待聯絡站長取得許可後再審。 | 2026-08-10 |
 | SpiritVale 官方 | https://spiritvale.info · Steam app 3767850 | 官方遊戲資料 / 未來 API | 尚無公開 API（spiritvalemarket 亦在等待官方 API） | N/A（未提供） | WATCH — 官方 API 出現即建 FutureOfficialSourceAdapter | 2026-08-10 |
+| SpiritValers | https://spiritvalers.com | Monsters / Items / Weapons / Artifacts / Sets / Skills / Maps（自遊戲客戶端萃取） | SPA（hash routing） | 有 ToS：**明文禁止 mass-scrape**（"Do not attempt to break, overload, mass-scrape..."）；資料版權屬遊戲開發商 | **PROHIBITED**（bulk 爬取違反其 ToS）。僅允許一般人工瀏覽查證。不建 adapter。 | 2026-08-10 |
+| Valepedia | https://www.valepedia.com | Equipment(576) / Grimoires(71) / Gems(129) / Cards(327) / Artifacts(45) / Skills(390) / Monsters(330) / Maps(58) / 狀態效果 / 多語言名稱 | **公開 JSON**：Nuxt `_payload.json`（equipment，結構化 tuple）+ `/versions/index.json`（遊戲版本 0.30.7/0.30.8/0.30.10）+ server-rendered HTML（cards/gems）+ `_nuxt/*.js` 資料/翻譯 chunks | robots.txt 全開放（`Disallow:` 空）；**無 ToS、無授權聲明**；非官方粉絲站（聯絡：巴哈姆特）；描述文字/圖片為遊戲內容（© 遊戲開發商） | **SAMPLE POC ACTIVE**（31 筆已入 pipeline）。Bulk import 技術可行（一次性、~1 req/s、每遊戲版本一次），法律狀態與 spiritvalemarket 相同等級（未明示禁止 vs 未明示授權）— 待 Will 決策。只取 factual stats + en/zh-TW 名稱，不搬描述全文與圖片。 | 2026-08-10 |
 | Manual seed（內部） | data/reference/manual/ | 樣本 items/cards/gems/attributes | 內部撰寫 | 自有 | ACTIVE（僅 schema 驗證用；`needs_verification: true`，不得作為正確遊戲資料呈現） | 2026-08-10 |
 
 ## 規則（全 adapter 適用）

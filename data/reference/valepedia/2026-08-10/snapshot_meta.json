@@ -1,0 +1,14 @@
+{
+  "source": "valepedia",
+  "site": "https://www.valepedia.com",
+  "game_version": "0.30.10",
+  "fetched_at": "2026-08-10",
+  "method": "public HTTP only — Nuxt _payload.json endpoints + server-rendered list pages; no auth/rate-limit/protection bypassed",
+  "delivery_mechanism": {
+    "equipment_detail": "/database/equipments/<EnglishName>/_payload.json (Nuxt devalue-encoded, ~2KB each, contains schema + tuple)",
+    "cards_gems": "server-rendered HTML list + detail pages (data also bundled in /_nuxt/*.js chunks)",
+    "versions": "/versions/index.json lists game versions (0.30.7, 0.30.8, 0.30.10)",
+    "translations": "per-language /_nuxt/*.js glossary chunks (monster_name etc., zhtw/zh/ja...)"
+  },
+  "note": "Small sample only (POC). Descriptions are game content (© SpiritVale developers) — importer keeps factual stats + en/zh-TW names, skips long descriptions except short flavor text needed for matching."
+}

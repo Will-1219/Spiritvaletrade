@@ -48,7 +48,8 @@ CREATE TABLE item_base_attributes (
   value_num    numeric,
   value_text   text,
   per_refine   boolean NOT NULL DEFAULT false,
-  PRIMARY KEY (item_id, attribute_id),
+  -- per_refine in PK: an item can have a base value AND a per-refine bonus of the same attribute
+  PRIMARY KEY (item_id, attribute_id, per_refine),
   CHECK (value_num IS NOT NULL OR value_text IS NOT NULL)
 );
 

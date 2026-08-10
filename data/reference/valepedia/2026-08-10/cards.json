@@ -1,0 +1,22 @@
+{
+  "source": "valepedia",
+  "list_url": "https://www.valepedia.com/database/cards",
+  "extracted_at": "2026-08-10",
+  "records": [
+    { "english_name": "Abomination Card", "chinese_name": "胸甲憎惡卡片", "slot": "胸甲", "effect": "Atk: + (1 × 精煉等級), DEF: - (1% × 精煉等級)" },
+    { "english_name": "Cosmic Entity Card", "chinese_name": "頭飾宇宙異形卡片", "slot": "頭飾", "effect": "MATK: +10%, ATK: +10%, HP: -25%, MP: -25%" },
+    { "english_name": "Chomproot Card", "chinese_name": "鞋子咬人根卡片", "slot": "鞋子", "effect": "狀態免疫：流血" },
+    { "english_name": "Voidspawn Card", "chinese_name": "頭飾虛空生物卡片", "slot": "頭飾", "effect": "授予 Lv.1 真視之眼" },
+    { "english_name": "Voidgazer Card", "chinese_name": "頭飾虛空魔眼卡片", "slot": "頭飾", "effect": "施法無法被中斷" },
+    { "english_name": "Chompbloom Card", "chinese_name": "盾牌咬人花卡片", "slot": "盾牌", "effect": "狀態免疫：緩速, 狀態免疫：流血" },
+    { "english_name": "Cinderspike Card", "chinese_name": "飾品餘燼尖刺卡片", "slot": "飾品", "effect": "傷害反射: +5%" },
+    { "english_name": "Little Star Card", "chinese_name": "飾品小星星卡片", "slot": "飾品", "effect": "聖傷害: +6%" },
+    { "english_name": "Twinkle Card", "chinese_name": "飾品閃爍光靈卡片", "slot": "飾品", "effect": "治療: +10%" },
+    { "english_name": "Cinderwheel Card", "chinese_name": "頭飾餘燼輪卡片", "slot": "頭飾", "effect": "狀態免疫：暈眩, MP: -25%" },
+    { "english_name": "Cindermaw Card", "chinese_name": "胸甲餘燼巨口卡片", "slot": "胸甲", "effect": "免疫擊退" },
+    { "english_name": "Angel Card", "chinese_name": "武器天使卡片", "slot": "武器", "effect": "聖傷害: +6%" },
+    { "english_name": "Seraphim Arbiter Card", "chinese_name": "胸甲熾天使裁決者卡片", "slot": "胸甲", "effect": "轉換為聖屬性" },
+    { "english_name": "Archangel Card", "chinese_name": "盾牌大天使卡片", "slot": "盾牌", "effect": "聖抗性: +25%" },
+    { "english_name": "Bat Card", "chinese_name": "飾品蝙蝠卡片", "slot": "飾品", "effect": "擊殺時魔力: +10" }
+  ]
+}

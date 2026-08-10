@@ -1,0 +1,22 @@
+{
+  "source": "valepedia",
+  "list_url": "https://www.valepedia.com/database/gems",
+  "extracted_at": "2026-08-10",
+  "records": [
+    { "english_name": "Firebolt Gem", "chinese_name": "火彈寶石", "effects": "火箭術Firebolt傷害: + (2% × 精煉等級)SkillDamage" },
+    { "english_name": "Fireball Gem", "chinese_name": "火球寶石", "effects": "火球術Fireball傷害: + (2% × 精煉等級)SkillDamage火焰之壁Firewall傷害: + (2% × 精煉等級)SkillDamage" },
+    { "english_name": "Thunderbolt Gem", "chinese_name": "落雷寶石", "effects": "雷擊術Thunderbolt傷害: + (2% × 精煉等級)SkillDamage" },
+    { "english_name": "Thunder Storm Gem", "chinese_name": "雷暴寶石", "effects": "雷爆術ThunderStorm傷害: + (2% × 精煉等級)SkillDamage靜電力場ThunderField傷害: + (2% × 精煉等級)SkillDamage" },
+    { "english_name": "Icebolt Gem", "chinese_name": "冰彈寶石", "effects": "冰箭術Icebolt傷害: + (2% × 精煉等級)SkillDamage" },
+    { "english_name": "Ice Shard Gem", "chinese_name": "冰晶碎片寶石", "effects": "冰晶碎片IceShard傷害: + (2% × 精煉等級)SkillDamage" },
+    { "english_name": "Tempo Gem", "chinese_name": "節奏寶石", "effects": "攻擊速度: +5% + (1% × 精煉等級)AtkSpd節奏" },
+    { "english_name": "Earthbolt Gem", "chinese_name": "大地箭寶石", "effects": "地震術Earthbolt傷害: + (2% × 精煉等級)SkillDamage" },
+    { "english_name": "Earth Spikes Gem", "chinese_name": "大地尖刺寶石", "effects": "崩裂術EarthSpikes傷害: + (2% × 精煉等級)SkillDamage" },
+    { "english_name": "Soul Strike Gem", "chinese_name": "魂擊寶石", "effects": "聖靈召喚SoulStrike傷害: + (2% × 精煉等級)SkillDamage" },
+    { "english_name": "Holy Light Gem", "chinese_name": "聖光寶石", "effects": "神聖之光HolyLight傷害: + (2% × 精煉等級)SkillDamage" },
+    { "english_name": "Fan Fire Gem", "chinese_name": "扇形連射寶石", "effects": "扇形速射FanFire傷害: + (2% × 精煉等級)SkillDamage" },
+    { "english_name": "Piercing Flurry Gem", "chinese_name": "貫穿連擊寶石", "effects": "連刺攻擊SpearThrust傷害: + (2% × 精煉等級)SkillDamage" },
+    { "english_name": "Air Cutter Gem", "chinese_name": "空氣刃寶石", "effects": "破空斬SpearSlice傷害: + (2% × 精煉等級)SkillDamage" },
+    { "english_name": "Aerial Shot Gem", "chinese_name": "凌空射擊寶石", "effects": "空中射擊AerialShot傷害: + (2% × 精煉等級)SkillDamage" }
+  ]
+}

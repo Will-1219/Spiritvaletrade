@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url';
 import { join, dirname } from 'node:path';
 import { ManualSourceAdapter } from './adapters/ManualSourceAdapter.js';
 import { SpiritValeMarketAdapter } from './adapters/SpiritValeMarketAdapter.js';
+import { ValepediaSourceAdapter } from './adapters/valepedia/ValepediaSourceAdapter.js';
 import { canonicalize } from './pipeline/canonicalize.js';
 import { validateCatalog } from './pipeline/validate.js';
 import { diffCatalogs, requiresReview } from './pipeline/diff.js';
@@ -17,15 +18,17 @@ async function main() {
   const versionTag = argValue(args, '--version') ?? new Date().toISOString().slice(0, 10);
 
   const adapter: ISourceAdapter =
-    source === 'manual'
-      ? new ManualSourceAdapter(join(ROOT, 'data', 'reference', 'manual'))
-      : new SpiritValeMarketAdapter();
+    source === 'manual' ? new ManualSourceAdapter(join(ROOT, 'data', 'reference', 'manual'))
+    : source === 'valepedia' ? new ValepediaSourceAdapter(join(ROOT, 'data', 'reference', 'valepedia'))
+    : new SpiritValeMarketAdapter();
 
   console.log(`[import] source=${adapter.sourceName} version=${versionTag}`);
 
   // 1-2. fetch + parse (adapter)
   const { records, meta } = await adapter.fetch(versionTag);
   console.log(`[fetch] ${records.length} raw records from ${meta.files?.join(', ')}`);
+  const warnings = (adapter as { warnings?: string[] }).warnings ?? [];
+  for (const w of warnings) console.log(`[fetch:warning] ${w}`);
 
   // 3. canonicalize
   const canonical = records.map((r) => canonicalize(r, adapter.sourceName));
@@ -46,7 +49,9 @@ async function main() {
   const catalogPath = join(ROOT, 'data', 'published', 'catalog.json');
   const versionPath = join(ROOT, 'data', 'published', 'versions', `${versionTag}.json`);
   const published = await loadPublishedCatalog(catalogPath);
-  const diff = diffCatalogs(published?.items ?? [], canonical);
+  // Diff only against items of the same source — other sources' items are untouched.
+  const currentSameSource = (published?.items ?? []).filter((i) => i.source === adapter.sourceName);
+  const diff = diffCatalogs(currentSameSource, canonical);
   console.log(
     `[diff] added=${diff.added.length} changed=${diff.changed.length} ` +
       `removed=${diff.removed.length} unknown=${diff.unknown.length}`,

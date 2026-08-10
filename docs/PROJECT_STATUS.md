@@ -1,6 +1,19 @@
 # PROJECT_STATUS.md
 
-更新：2026-08-10（session 1）
+更新：2026-08-10（session 1，下午更新：新來源調查 + Valepedia adapter）
+
+## 最新進展（下午）
+
+- **spiritvalers.com**：ToS 明文禁止 mass-scrape → PROHIBITED，不建 adapter。
+- **valepedia.com**：★ 找到最佳 reference source。公開 Nuxt `_payload.json` 結構化 endpoint（equipment 含精煉係數 stats、插槽）、`/versions/index.json` 遊戲版本清單（0.30.10 現行）、server-rendered cards/gems、en/zh-TW（實為 17 語）名稱。詳見 REFERENCE_SOURCE_REPORT.md。
+- **ValepediaSourceAdapter 完成**：devalue payload decoder + zh-TW effect parser（`攻擊速度: +5% + (1% × 精煉等級)` → ATTACK_SPEED base 5 / per-refine 1；狀態免疫、負值、% vs flat 全處理；不可解析片段保留原文不丟棄）。
+- **樣本匯入**：31 筆（15 gems、15 cards、Broad Sword 完整 detail）→ pipeline 全綠 → published catalog 51 items（manual 20 + valepedia 31）→ PGlite DB POC 通過。
+- 測試 9/9 pass。attribute dictionary 擴充至 35（新增 BLOCK、HOLY_DAMAGE、SOCKETS、REQUIRED_LEVEL、*_PERCENT、*_FLAT、各種免疫等）。
+- Chrome 擴充已連線，瀏覽器輔助調查 workflow 驗證可用。
+
+## 待 Will 決策
+
+**Valepedia bulk import 開關**：技術可行（~1,100 頁 × 2KB、1 req/s 一次跑完 ≈ 20 分鐘、每遊戲版本一次）。該站無 ToS、robots 全開放，但也無明示授權（法律狀態同 spiritvalemarket）。策略已保守化：只取 factual stats + 名稱，不搬描述/圖片。你說可跳過聯絡站長——確認後我就把 bulk fetcher 寫進 adapter 開跑。
 
 ## 已完成
 
