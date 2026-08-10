@@ -1,0 +1,54 @@
+{
+  "source": "manual",
+  "note": "Internal placeholder seed for schema validation only. NOT verified game data. Do not display to players as factual.",
+  "records": [
+    {
+      "name_en": "Titanplate", "name_zh_tw": "泰坦重鎧", "category": "equipment", "subcategory": "armor",
+      "equipment_slot": "body", "rarity": "epic", "description": "Massive plate armor forged for vanguard fighters.",
+      "attributes": [ { "key": "VIT", "value": 12 }, { "key": "DEF", "value": 85 }, { "key": "MAX_HP", "value": 8 } ]
+    },
+    {
+      "name_en": "Duskfang Saber", "name_zh_tw": "暮牙軍刀", "category": "equipment", "subcategory": "weapon",
+      "equipment_slot": "weapon", "rarity": "rare", "description": "A curved blade that hums at twilight.",
+      "attributes": [ { "key": "ATK", "value": 120 }, { "key": "AGI", "value": 6 }, { "key": "CRITICAL_CHANCE", "value": 4 } ]
+    },
+    {
+      "name_en": "Wardweave Robe", "name_zh_tw": "護紋法袍", "category": "equipment", "subcategory": "armor",
+      "equipment_slot": "body", "rarity": "rare",
+      "attributes": [ { "key": "INT", "value": 10 }, { "key": "MDEF", "value": 40 }, { "key": "MAX_MP", "value": 6 } ]
+    },
+    {
+      "name_en": "Emberguard Shield", "name_zh_tw": "燼護盾", "category": "equipment", "subcategory": "shield",
+      "equipment_slot": "offhand", "rarity": "epic",
+      "attributes": [ { "key": "DEF", "value": 60 }, { "key": "FIRE_RESISTANCE", "value": 15 }, { "key": "REFLECT_DAMAGE", "value": 5 } ]
+    },
+    {
+      "name_en": "Swiftstep Boots", "name_zh_tw": "疾行之靴", "category": "equipment", "subcategory": "boots",
+      "equipment_slot": "feet", "rarity": "common",
+      "attributes": [ { "key": "MOVEMENT_SPEED", "value": 10 }, { "key": "AGI", "value": 4 } ]
+    },
+    {
+      "name_en": "Oath Ring", "name_zh_tw": "誓約之戒", "category": "equipment", "subcategory": "accessory",
+      "equipment_slot": "ring", "rarity": "rare",
+      "attributes": [ { "key": "STR", "value": 5 }, { "key": "VIT", "value": 5 } ]
+    },
+    {
+      "name_en": "Sanctified Helm", "name_zh_tw": "聖化頭盔", "category": "equipment", "subcategory": "helmet",
+      "equipment_slot": "head", "rarity": "epic",
+      "attributes": [ { "key": "HOLY_RESISTANCE", "value": 12 }, { "key": "DEF", "value": 30 }, { "key": "BLEED_IMMUNITY", "value": true } ]
+    },
+    {
+      "name_en": "Spirit Ore", "name_zh_tw": "靈礦石", "category": "material", "subcategory": "ore",
+      "description": "Refining material."
+    },
+    {
+      "name_en": "Vale Elixir", "name_zh_tw": "靈谷藥劑", "category": "consumable", "subcategory": "potion",
+      "description": "Restores HP over time."
+    },
+    {
+      "name_en": "Echo Pendant", "name_zh_tw": "回響墜飾", "category": "equipment", "subcategory": "accessory",
+      "equipment_slot": "necklace", "rarity": "legendary",
+      "attributes": [ { "key": "DOUBLE_ATTACK", "value": 5 }, { "key": "ATTACK_SPEED", "value": 6 } ]
+    }
+  ]
+}

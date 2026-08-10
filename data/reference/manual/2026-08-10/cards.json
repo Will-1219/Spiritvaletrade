@@ -1,0 +1,27 @@
+{
+  "source": "manual",
+  "note": "Internal placeholder seed for schema validation only. NOT verified game data.",
+  "records": [
+    {
+      "name_en": "Night Fiend Card", "name_zh_tw": "夜魔卡片", "category": "card", "rarity": "rare",
+      "description": "Socketable card dropped by Night Fiend.",
+      "attributes": [ { "key": "AGI", "value": 3 }, { "key": "CRITICAL_CHANCE", "value": 2 } ]
+    },
+    {
+      "name_en": "Stonehide Card", "name_zh_tw": "石膚卡片", "category": "card", "rarity": "common",
+      "attributes": [ { "key": "DEF", "value": 10 } ]
+    },
+    {
+      "name_en": "Marsh Witch Card", "name_zh_tw": "沼澤女巫卡片", "category": "card", "rarity": "epic",
+      "attributes": [ { "key": "MATK", "value": 15 }, { "key": "MAX_MP", "value": 4 } ]
+    },
+    {
+      "name_en": "Bloodthorn Card", "name_zh_tw": "血棘卡片", "category": "card", "rarity": "rare",
+      "attributes": [ { "key": "HEALTH_ON_HIT", "value": 12 } ]
+    },
+    {
+      "name_en": "Gale Harpy Card", "name_zh_tw": "疾風鷹身卡片", "category": "card", "rarity": "rare",
+      "attributes": [ { "key": "ATTACK_SPEED", "value": 5 } ]
+    }
+  ]
+}

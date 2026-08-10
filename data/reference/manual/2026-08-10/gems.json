@@ -1,0 +1,27 @@
+{
+  "source": "manual",
+  "note": "Internal placeholder seed for schema validation only. NOT verified game data.",
+  "records": [
+    {
+      "name_en": "Echo Gem", "name_zh_tw": "回響寶石", "category": "gem", "rarity": "legendary",
+      "description": "Double Attack +3% per refine.",
+      "attributes": [ { "key": "DOUBLE_ATTACK", "value": 3, "per_refine": true } ]
+    },
+    {
+      "name_en": "Vital Gem", "name_zh_tw": "活力寶石", "category": "gem", "rarity": "rare",
+      "attributes": [ { "key": "MAX_HP", "value": 2, "per_refine": true } ]
+    },
+    {
+      "name_en": "Fury Gem", "name_zh_tw": "狂怒寶石", "category": "gem", "rarity": "epic",
+      "attributes": [ { "key": "ATK", "value": 8 } ]
+    },
+    {
+      "name_en": "Mind Gem", "name_zh_tw": "心智寶石", "category": "gem", "rarity": "rare",
+      "attributes": [ { "key": "INT", "value": 3 }, { "key": "MATK", "value": 6 } ]
+    },
+    {
+      "name_en": "Bulwark Gem", "name_zh_tw": "壁壘寶石", "category": "gem", "rarity": "epic",
+      "attributes": [ { "key": "DEF", "value": 12 }, { "key": "VULNERABILITY_IMMUNITY", "value": true } ]
+    }
+  ]
+}

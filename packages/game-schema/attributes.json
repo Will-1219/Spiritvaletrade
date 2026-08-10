@@ -1,0 +1,26 @@
+{
+  "version": "2026-08-10",
+  "attributes": [
+    { "canonical_key": "STR", "name_en": "STR", "name_zh_tw": "力量", "value_type": "flat", "searchable": true, "refine_scalable": false },
+    { "canonical_key": "VIT", "name_en": "VIT", "name_zh_tw": "體力", "value_type": "flat", "searchable": true, "refine_scalable": false },
+    { "canonical_key": "DEX", "name_en": "DEX", "name_zh_tw": "靈巧", "value_type": "flat", "searchable": true, "refine_scalable": false },
+    { "canonical_key": "AGI", "name_en": "AGI", "name_zh_tw": "敏捷", "value_type": "flat", "searchable": true, "refine_scalable": false },
+    { "canonical_key": "INT", "name_en": "INT", "name_zh_tw": "智力", "value_type": "flat", "searchable": true, "refine_scalable": false },
+    { "canonical_key": "MAX_HP", "name_en": "Max HP", "name_zh_tw": "最大生命", "value_type": "percent", "searchable": true, "refine_scalable": true },
+    { "canonical_key": "MAX_MP", "name_en": "Max MP", "name_zh_tw": "最大魔力", "value_type": "percent", "searchable": true, "refine_scalable": true },
+    { "canonical_key": "ATK", "name_en": "ATK", "name_zh_tw": "物理攻擊", "value_type": "flat", "searchable": true, "refine_scalable": true },
+    { "canonical_key": "MATK", "name_en": "MATK", "name_zh_tw": "魔法攻擊", "value_type": "flat", "searchable": true, "refine_scalable": true },
+    { "canonical_key": "DEF", "name_en": "DEF", "name_zh_tw": "物理防禦", "value_type": "flat", "searchable": true, "refine_scalable": true },
+    { "canonical_key": "MDEF", "name_en": "MDEF", "name_zh_tw": "魔法防禦", "value_type": "flat", "searchable": true, "refine_scalable": true },
+    { "canonical_key": "REFLECT_DAMAGE", "name_en": "Reflect Damage", "name_zh_tw": "反射傷害", "value_type": "percent", "searchable": true, "refine_scalable": false },
+    { "canonical_key": "HEALTH_ON_HIT", "name_en": "Health on Hit", "name_zh_tw": "命中回血", "value_type": "flat", "searchable": true, "refine_scalable": false },
+    { "canonical_key": "ATTACK_SPEED", "name_en": "Attack Speed", "name_zh_tw": "攻擊速度", "value_type": "percent", "searchable": true, "refine_scalable": false },
+    { "canonical_key": "MOVEMENT_SPEED", "name_en": "Movement Speed", "name_zh_tw": "移動速度", "value_type": "percent", "searchable": true, "refine_scalable": false },
+    { "canonical_key": "CRITICAL_CHANCE", "name_en": "Critical Chance", "name_zh_tw": "暴擊率", "value_type": "percent", "searchable": true, "refine_scalable": false },
+    { "canonical_key": "FIRE_RESISTANCE", "name_en": "Fire Resistance", "name_zh_tw": "火焰抗性", "value_type": "percent", "searchable": true, "refine_scalable": false },
+    { "canonical_key": "HOLY_RESISTANCE", "name_en": "Holy Resistance", "name_zh_tw": "神聖抗性", "value_type": "percent", "searchable": true, "refine_scalable": false },
+    { "canonical_key": "BLEED_IMMUNITY", "name_en": "Bleed Immunity", "name_zh_tw": "流血免疫", "value_type": "boolean", "searchable": true, "refine_scalable": false },
+    { "canonical_key": "VULNERABILITY_IMMUNITY", "name_en": "Vulnerability Immunity", "name_zh_tw": "易傷免疫", "value_type": "boolean", "searchable": true, "refine_scalable": false },
+    { "canonical_key": "DOUBLE_ATTACK", "name_en": "Double Attack", "name_zh_tw": "二連擊", "value_type": "percent", "searchable": true, "refine_scalable": true }
+  ]
+}
