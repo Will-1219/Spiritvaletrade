@@ -1,6 +1,13 @@
 # PROJECT_STATUS.md
 
-更新：2026-08-10（session 1：Web v0 完成,可公開部署）
+更新：2026-08-10（session 1：🚀 ValeTrade 正式公開上線）
+
+## 🚀 LIVE — https://spiritvaletrade.vercel.app
+
+- GitHub repo:https://github.com/Will-1219/Spiritvaletrade(main branch,Vercel 自動部署:push 即上線)
+- Vercel 設定:Root Directory=apps/web、Framework=Next.js
+- 線上驗證 ✓:首頁 975 筆、屬性搜尋(裝備+BLOCK≥10+MAX_HP≥10%→闊劍)正確
+- 下一步:Supabase(市集刊登/賣家聯絡/WTB)、自訂網域、SpiritVale 社群曝光
 
 ## WEB v0 — ValeTrade 網站 ✅（Will 方向確認:網頁優先,桌面 App 暫緩）
 
