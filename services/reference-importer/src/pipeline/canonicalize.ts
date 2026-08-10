@@ -67,16 +67,25 @@ export function canonicalize(raw: RawItemRecord, source: string): CanonicalItem 
   const category = normalizeCategory(raw.category);
   if (!category) throw new Error(`Unknown category "${raw.category}" for "${raw.name_en}"`);
 
-  const attributes = (raw.attributes ?? []).map((a) => {
+  const attrList = (raw.attributes ?? []).map((a) => {
     const key = a.key.trim().toUpperCase().replace(/[^A-Z0-9]+/g, '_');
     if (typeof a.value === 'number') {
       return { attribute_key: key, value_num: a.value, per_refine: a.per_refine ?? false };
     }
-    if (typeof a.value === 'boolean') {
-      return { attribute_key: key, value_text: String(a.value), per_refine: a.per_refine ?? false };
-    }
     return { attribute_key: key, value_text: String(a.value), per_refine: a.per_refine ?? false };
   });
+  // Merge duplicate (attribute, per_refine) lines: numeric values stack (sum).
+  const merged = new Map<string, (typeof attrList)[number]>();
+  for (const a of attrList) {
+    const k = `${a.attribute_key}|${a.per_refine}`;
+    const prev = merged.get(k);
+    if (prev && prev.value_num !== undefined && a.value_num !== undefined) {
+      prev.value_num += a.value_num;
+    } else if (!prev) {
+      merged.set(k, { ...a });
+    }
+  }
+  const attributes = [...merged.values()];
 
   const base = {
     canonical_key: makeCanonicalKey(raw.name_en, category),

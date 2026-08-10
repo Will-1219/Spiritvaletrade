@@ -69,17 +69,21 @@ async function main() {
   }
   console.log(`[db] inserted ${catalog.items.length} items with attributes`);
 
-  // Attribute search demo: equipment with (VIT >= 10 OR STR >= 5) AND MAX_HP >= 8
+  // Attribute search demo (ValeTrade advanced-search shape) on real reference data:
+  // weapons with Block >= 10% AND Max HP >= 10% AND >= 3 sockets
   const search = await db.query(
     `SELECT gi.canonical_key, gi.name_en, gi.name_zh_tw
        FROM game_items gi
-      WHERE gi.category = 'equipment'
+      WHERE gi.category = 'equipment' AND gi.equipment_slot = 'weapon'
         AND EXISTS (SELECT 1 FROM item_base_attributes iba JOIN attributes a ON a.id = iba.attribute_id
-                    WHERE iba.item_id = gi.id AND a.canonical_key IN ('VIT','STR') AND iba.value_num >= 10)
+                    WHERE iba.item_id = gi.id AND a.canonical_key = 'BLOCK' AND iba.value_num >= 10)
         AND EXISTS (SELECT 1 FROM item_base_attributes iba JOIN attributes a ON a.id = iba.attribute_id
-                    WHERE iba.item_id = gi.id AND a.canonical_key = 'MAX_HP' AND iba.value_num >= 8)`,
+                    WHERE iba.item_id = gi.id AND a.canonical_key = 'MAX_HP' AND iba.value_num >= 10)
+        AND EXISTS (SELECT 1 FROM item_base_attributes iba JOIN attributes a ON a.id = iba.attribute_id
+                    WHERE iba.item_id = gi.id AND a.canonical_key = 'SOCKETS' AND iba.value_num >= 3)
+      ORDER BY gi.name_en`,
   );
-  console.log('[search] equipment with (VIT>=10) AND MAX_HP>=8%:', search.rows);
+  console.log('[search] weapon AND BLOCK>=10% AND MAX_HP>=10% AND SOCKETS>=3:', search.rows);
 
   const counts = await db.query(
     `SELECT category, count(*)::int AS n FROM game_items GROUP BY category ORDER BY category`,

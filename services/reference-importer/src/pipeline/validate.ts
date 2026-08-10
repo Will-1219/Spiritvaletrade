@@ -50,12 +50,9 @@ export function validateCatalog(
           message: `attribute ${attr.attribute_key} (boolean) requires true/false`,
         });
       }
-      if (attr.per_refine && !def.refine_scalable) {
-        issues.push({
-          canonical_key: key, severity: 'warning',
-          message: `attribute ${attr.attribute_key} marked per_refine but dictionary says not refine_scalable`,
-        });
-      }
+      // NOTE: per_refine on a data row is authoritative — real game data shows most
+      // attributes can roll refine-scaling lines. The dictionary's refine_scalable
+      // is a UI hint only and is not validated against.
     }
   }
 

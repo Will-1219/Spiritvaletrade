@@ -2,7 +2,15 @@
 
 更新：2026-08-10（session 1，下午更新：新來源調查 + Valepedia adapter）
 
-## 最新進展（下午）
+## 最新進展（晚間：VALEPEDIA 全量匯入完成 ✦）
+
+- Will 核准 valepedia bulk import。經 Chrome 以低速一次性抓取 game version **0.30.10** 全量公開資料：**576 equipment + 270 cards + 129 gems**（+220 stat enum 對照、25 種裝備類型→slot mapping、7 種狀態抗性詞彙），SHA-256 校驗傳輸完整，0 錯誤。
+- Bulk parser：devalue payload 解碼、enum-tagged 效果文字解析（base%/per-refine/負值/狀態抗性）、zh/en 名稱拆解（含 7 筆無英文名的 fallback）、重複屬性合併（同鍵數值相加）。
+- **Production catalog 現況：975 筆真實 reference items**（虛構 manual 種子已從 production 移除，僅留測試用）。zh-TW 名稱覆蓋 >99%。attribute dictionary 66 條。
+- 驗證：測試 9/9 pass；PGlite 真 Postgres 匯入 975 items + 3,400+ attribute rows；進階搜尋demo（weapon AND BLOCK≥10% AND MAX_HP≥10% AND SOCKETS≥3 → 闊劍 Broad Sword）✔
+- **Milestone A（Reference Catalog）從 POC 升級為真實資料完成。** 下一步：PHASE 2 Desktop F8 Capture POC。
+
+## 稍早進展（下午）
 
 - **spiritvalers.com**：ToS 明文禁止 mass-scrape → PROHIBITED，不建 adapter。
 - **valepedia.com**：★ 找到最佳 reference source。公開 Nuxt `_payload.json` 結構化 endpoint（equipment 含精煉係數 stats、插槽）、`/versions/index.json` 遊戲版本清單（0.30.10 現行）、server-rendered cards/gems、en/zh-TW（實為 17 語）名稱。詳見 REFERENCE_SOURCE_REPORT.md。
