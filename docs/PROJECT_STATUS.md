@@ -1,6 +1,15 @@
 # PROJECT_STATUS.md
 
-更新：2026-08-10（session 1 深夜：PHASE 2 Desktop F8 Capture POC 完成）
+更新：2026-08-10（session 1：Web v0 完成,可公開部署）
+
+## WEB v0 — ValeTrade 網站 ✅（Will 方向確認:網頁優先,桌面 App 暫緩）
+
+- `apps/web/` Next.js 15 + React 19 + Tailwind,深色 game-companion 風格。
+- 頁面:首頁(搜尋+分類統計+精選)、物品資料庫(975 筆;中英文搜尋、分類/部位篩選、**三組屬性 AND 條件搜尋**)、物品詳情(基礎屬性/精煉成長/來源)。
+- 資料:catalog.json 打包進站(v0 免資料庫);build ✓、本機煙霧測試 ✓(BLOCK≥10+MAX_HP≥10% → 闊劍)。
+- **[Will 行動項] 公開上線**:照 `docs/DEPLOY.md`(GitHub Desktop 發布 repo → Vercel Import,Root Directory 設 apps/web)。約 15 分鐘,全程免費。
+- 下一版(市集刊登/賣家聯絡/WTB)需要 Supabase — Will 註冊後我接手 schema 與功能。
+- 桌面 F8 App(Phase 2)程式碼保留於 apps/desktop,依 Will 指示暫緩 Windows 實測。
 
 ## PHASE 2 — Desktop F8 Capture POC ✅（程式碼完成,待 Windows 實測）
 
