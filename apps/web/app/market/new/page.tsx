@@ -1,6 +1,8 @@
+import { redirect } from 'next/navigation';
 import { getCatalog } from '@/lib/catalog';
 import { getLang } from '@/lib/i18n';
 import { getDb } from '@/lib/db';
+import { getUser } from '@/lib/auth';
 import NewListingForm from './NewListingForm';
 
 export const dynamic = 'force-dynamic';
@@ -9,12 +11,11 @@ export default async function NewListing({ searchParams }: { searchParams: Promi
   const lang = await getLang();
   const { item } = await searchParams;
   if (!getDb()) {
-    return (
-      <div className="panel p-6 max-w-xl mx-auto text-sm text-dim">
-        市集尚未啟用(資料庫連線未設定)。
-      </div>
-    );
+    return <div className="panel p-6 max-w-xl mx-auto text-sm text-dim">市集尚未啟用(資料庫連線未設定)。</div>;
   }
+  const user = await getUser();
+  if (!user) redirect(`/login?next=${encodeURIComponent(`/market/new${item ? `?item=${item}` : ''}`)}`);
+
   const items = getCatalog().items.map((i) => ({
     key: i.canonical_key,
     en: i.name_en,

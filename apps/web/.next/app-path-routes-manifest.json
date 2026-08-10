@@ -1,9 +1,0 @@
-{
-  "/_not-found/page": "/_not-found",
-  "/page": "/",
-  "/database/page": "/database",
-  "/database/[key]/page": "/database/[key]",
-  "/market/manage/page": "/market/manage",
-  "/market/page": "/market",
-  "/market/new/page": "/market/new"
-}

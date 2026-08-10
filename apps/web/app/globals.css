@@ -3,26 +3,42 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
-  @apply bg-bg text-slate-200;
-  font-family: "Segoe UI", "Noto Sans TC", system-ui, sans-serif;
+  @apply bg-bg text-ink font-sans antialiased;
+}
+
+h1, h2 {
+  @apply font-display tracking-tight;
 }
 
 .panel {
-  @apply bg-panel border border-line rounded-xl;
+  @apply bg-panel border border-line rounded-xl shadow-card;
 }
 
 .input {
-  @apply bg-bg border border-line rounded-lg px-3 py-2 text-sm text-slate-200 outline-none focus:border-accent;
+  @apply bg-white border border-line rounded-lg px-3 py-2 text-sm text-ink outline-none
+    placeholder:text-dim/70 focus:border-accent focus:ring-2 focus:ring-accent/15 transition-shadow;
 }
 
 .btn {
-  @apply bg-accent/10 border border-accent/40 text-accent rounded-lg px-4 py-2 text-sm font-medium hover:bg-accent/20 transition-colors;
+  @apply inline-flex items-center justify-center gap-1.5 bg-accent text-white rounded-lg px-4 py-2
+    text-sm font-medium shadow-card hover:shadow-lift hover:brightness-110 active:brightness-95
+    transition-all disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center bg-white border border-line text-ink rounded-lg
+    px-4 py-2 text-sm font-medium hover:border-accent hover:text-accent transition-colors;
 }
 
 .chip {
-  @apply inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-md border border-line bg-bg text-dim;
+  @apply inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-md border border-line
+    bg-bg text-dim whitespace-nowrap;
+}
+
+::selection {
+  @apply bg-accent/20;
 }

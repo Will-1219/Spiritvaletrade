@@ -33,7 +33,7 @@ export default async function ItemDetail({ params }: { params: Promise<{ key: st
 
   return (
     <div className="max-w-2xl mx-auto space-y-6">
-      <Link href="/database" className="text-sm text-dim hover:text-slate-200">{t.backToDb}</Link>
+      <Link href="/database" className="text-sm text-dim hover:text-ink">{t.backToDb}</Link>
 
       <div className="panel p-6 space-y-4">
         <div className="flex items-start justify-between gap-3 flex-wrap">

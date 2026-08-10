@@ -64,7 +64,7 @@ export default async function Home() {
 
       <section className="panel p-5 text-sm leading-relaxed flex items-center justify-between flex-wrap gap-3">
         <div className="text-dim">
-          <b className="text-slate-200">{lang === 'zh' ? '市集開張' : 'Market is open'}</b>
+          <b className="text-ink">{lang === 'zh' ? '市集開張' : 'Market is open'}</b>
           {lang === 'zh'
             ? ' — 把你的物品刊登上來，買家聯絡你後在遊戲內完成交易。'
             : ' — list your items; buyers contact you and trade in-game.'}

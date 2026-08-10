@@ -12,20 +12,18 @@ export default function NewListingForm({ items, prefKey, lang }: {
   const [state, action, pending] = useActionState<CreateResult, FormData>(createListing, {});
   const zh = lang === 'zh';
 
-  if (state.token) {
+  if (state.id) {
     return (
       <div className="panel p-6 space-y-4 max-w-xl mx-auto">
         <h2 className="text-lg font-bold text-accent">{zh ? '刊登成功!' : 'Listing created!'}</h2>
         <p className="text-sm text-dim">
           {zh
-            ? '這是你的「管理碼」,標記售出/取消時需要。只會顯示這一次,請立刻複製保存:'
-            : 'This is your manage code — needed to mark sold/cancel. Shown only once, copy it now:'}
+            ? '買家的購買意願與出價會出現在「我的帳號」,記得回來查看。'
+            : 'Buy requests and offers will appear in My Account.'}
         </p>
-        <code className="block bg-bg border border-gold/50 rounded-lg p-3 text-gold text-lg select-all">
-          {state.token}
-        </code>
         <div className="flex gap-3">
-          <Link href="/market" className="btn">{zh ? '前往市集' : 'Go to market'}</Link>
+          <Link href={`/market/${state.id}`} className="btn">{zh ? '查看刊登' : 'View listing'}</Link>
+          <Link href="/account" className="btn">{zh ? '我的帳號' : 'My account'}</Link>
         </div>
       </div>
     );
@@ -88,8 +86,8 @@ export default function NewListingForm({ items, prefKey, lang }: {
       </div>
 
       <label className="block text-sm">
-        <span className="text-dim">{zh ? '聯絡方式(Discord ID 等)' : 'Contact (Discord ID etc.)'}</span>
-        <input name="contact" className="input w-full mt-1" required maxLength={120} placeholder="discord: will#1234" />
+        <span className="text-dim">{zh ? '物品截圖(選填,遊戲 tooltip 截圖讓買家更信任)' : 'Item screenshot (optional)'}</span>
+        <input name="image" type="file" accept="image/png,image/jpeg,image/webp" className="input w-full mt-1 file:mr-3 file:rounded-md file:border-0 file:bg-accent/10 file:text-accent file:px-3 file:py-1" />
       </label>
 
       <label className="block text-sm">
@@ -97,7 +95,7 @@ export default function NewListingForm({ items, prefKey, lang }: {
         <textarea name="note" className="input w-full mt-1" rows={2} maxLength={300} />
       </label>
 
-      {state.error && <div className="text-sm text-red-400">{state.error}</div>}
+      {state.error && <div className="text-sm text-red-600">{state.error}</div>}
 
       <button className="btn w-full" disabled={pending} type="submit">
         {pending ? (zh ? '刊登中…' : 'Publishing…') : (zh ? '發布刊登' : 'Publish listing')}

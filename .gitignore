@@ -6,3 +6,6 @@ dist/
 .DS_Store
 target/
 apps/desktop/dist/
+.next/
+_sync/
+_to_delete/
