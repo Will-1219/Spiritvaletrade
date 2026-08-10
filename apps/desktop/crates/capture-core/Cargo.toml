@@ -1,0 +1,7 @@
+[package]
+name = "capture-core"
+version = "0.1.0"
+edition = "2021"
+description = "ValeTrade pure capture logic: ROI math + tooltip boundary detection (no OS deps, fully testable)"
+
+[dependencies]

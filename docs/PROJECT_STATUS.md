@@ -1,6 +1,16 @@
 # PROJECT_STATUS.md
 
-更新：2026-08-10（session 1，下午更新：新來源調查 + Valepedia adapter）
+更新：2026-08-10（session 1 深夜：PHASE 2 Desktop F8 Capture POC 完成）
+
+## PHASE 2 — Desktop F8 Capture POC ✅（程式碼完成,待 Windows 實測）
+
+- `apps/desktop/` Tauri 2 + Rust + React：
+  - **capture-core**（純 Rust crate,無 OS 相依）：cursor ROI 數學(bounded 680×820@1080p、邊界 clamp)+ tooltip 邊界偵測(降採樣暗格 mask → 游標種子 flood fill → bounding box → 矩形度信心分數)。**9/9 tests pass**(含雜訊拒絕、過小面板拒絕、螢幕外游標)。
+  - **src-tauri 殼層**：F8 global hotkey(tauri-plugin-global-shortcut)、SpiritVale 前景視窗 gate(Win32 GetForegroundWindow,非遊戲一律拒絕)、xcap 0.9 螢幕擷取、tooltip crop 存 PNG(`%APPDATA%/com.valetrade.companion/captures/`)、事件推送前端。**cargo check 全通過**(Linux target;Windows 分支為標準 Win32 呼叫)。
+  - **React 前端**：深色 companion UI,顯示擷取耗時/偵測信心/裁切預覽/歷史,含手動測試按鈕與隱私聲明。
+- 隱私規則程式碼強制:非前景遊戲拒絕、只擷取 cursor ROI、整幀立即釋放、本機存檔、Phase 2 無上傳。
+- **[Will 行動項] Windows 實測**：`apps/desktop/README.md` 有完整步驟(rustup + Node + VS Build Tools → `npm run tauri dev` → 開 SpiritVale 按 F8)。實測後提供 5-10 張 F8 截圖,用來校準 tooltip 偵測參數並開始 PHASE 3(OCR)。
+
 
 ## 最新進展（晚間：VALEPEDIA 全量匯入完成 ✦）
 
