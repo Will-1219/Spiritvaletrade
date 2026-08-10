@@ -1,6 +1,15 @@
 # PROJECT_STATUS.md
 
-更新：2026-08-10（session 1：🚀 ValeTrade 正式公開上線）
+更新：2026-08-10（session 1 續：市集刊登 + 漢化補丁整合完成）
+
+## 市集刊登 + 中英雙語 ✅（程式碼完成,待 Will 設定 Supabase 後啟用）
+
+- **SpiritZh 漢化補丁 v3.64.3 整合**:974/975 物品譯名以社群補丁為準(752 筆更新,如 Broad Sword=大劍),修復 5 筆壞名稱(3D Glasses、Red Shell、Corpse Explosion Gem 等);對照子集存 `data/reference/spiritzh/v3.64.3/`(含出處聲明);`applyTranslations.ts` 可重複執行。
+- **中英切換**:header 切換鈕(cookie),英文名恆為 canonical(搜尋準確),搜尋中英皆可命中。
+- **市集功能**(`/market`):刊登建立(物品自動完成、精煉/數量/時效 24-72h、價格、角色名、聯絡方式)、瀏覽/搜尋、物品頁顯示在售清單+「刊登此物品」、賣家管理碼標記售出/取消、listing_events 記錄。無資料庫 env 時優雅降級。
+- **安全**:Supabase service-role 僅存伺服器端;RLS 無 policy 阻擋直連;管理碼只顯示一次。
+- Schema:`infra/database/migrations/002_listings.sql`。
+- **[Will 行動項]** 照 `docs/SUPABASE_SETUP.md` 建 Supabase(5 分鐘)→ Vercel 加兩個環境變數 → GitHub Desktop Push → Redeploy。
 
 ## 🚀 LIVE — https://spiritvaletrade.vercel.app
 

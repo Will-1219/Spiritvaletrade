@@ -2,6 +2,7 @@ import Link from 'next/link';
 import {
   attributeOptions, CATEGORIES, formatAttr, searchItems, slotOptions, type AttrFilter,
 } from '@/lib/catalog';
+import { displayName, subName, getLang } from '@/lib/i18n';
 
 export const dynamic = 'force-dynamic';
 
@@ -11,6 +12,7 @@ interface Params {
 }
 
 export default async function Database({ searchParams }: { searchParams: Promise<Params> }) {
+  const lang = await getLang();
   const p = await searchParams;
   const attrs: AttrFilter[] = [];
   for (const [a, v] of [[p.a1, p.v1], [p.a2, p.v2], [p.a3, p.v3]] as const) {
@@ -71,10 +73,10 @@ export default async function Database({ searchParams }: { searchParams: Promise
             className="panel p-4 hover:border-accent transition-colors"
           >
             <div className="flex items-baseline justify-between gap-2">
-              <div className="font-medium truncate">{it.name_zh_tw ?? it.name_en}</div>
+              <div className="font-medium truncate">{displayName(it, lang)}</div>
               <span className="chip shrink-0">{it.category}</span>
             </div>
-            <div className="text-xs text-dim truncate">{it.name_en}</div>
+            <div className="text-xs text-dim truncate">{subName(it, lang)}</div>
             <div className="mt-2 space-y-0.5 text-xs">
               {it.attributes.slice(0, 4).map((a, i) => (
                 <div key={i} className="flex justify-between">

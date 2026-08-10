@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import { CATEGORIES, getCatalog } from '@/lib/catalog';
+import { displayName, subName, getLang } from '@/lib/i18n';
 
-export default function Home() {
+export default async function Home() {
+  const lang = await getLang();
   const catalog = getCatalog();
   const counts = new Map<string, number>();
   for (const it of catalog.items) counts.set(it.category, (counts.get(it.category) ?? 0) + 1);
@@ -48,8 +50,8 @@ export default function Home() {
               href={`/database/${encodeURIComponent(it.canonical_key)}`}
               className="panel p-4 hover:border-accent transition-colors"
             >
-              <div className="font-medium">{it.name_zh_tw ?? it.name_en}</div>
-              <div className="text-xs text-dim">{it.name_en}</div>
+              <div className="font-medium">{displayName(it, lang)}</div>
+              <div className="text-xs text-dim">{subName(it, lang)}</div>
               <div className="mt-2 flex flex-wrap gap-1">
                 <span className="chip">{it.category}</span>
                 {it.equipment_slot && <span className="chip">{it.equipment_slot}</span>}
@@ -60,9 +62,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="panel p-5 text-sm text-dim leading-relaxed">
-        <b className="text-slate-200">市集刊登即將推出</b> — 玩家將可把遊戲內物品刊登到 ValeTrade，
-        買家用屬性條件精準搜尋，聯絡賣家後在遊戲內完成交易。
+      <section className="panel p-5 text-sm leading-relaxed flex items-center justify-between flex-wrap gap-3">
+        <div className="text-dim">
+          <b className="text-slate-200">{lang === 'zh' ? '市集開張' : 'Market is open'}</b>
+          {lang === 'zh'
+            ? ' — 把你的物品刊登上來，買家聯絡你後在遊戲內完成交易。'
+            : ' — list your items; buyers contact you and trade in-game.'}
+        </div>
+        <div className="flex gap-2">
+          <Link href="/market" className="btn">{lang === 'zh' ? '逛市集' : 'Browse'}</Link>
+          <Link href="/market/new" className="btn">{lang === 'zh' ? '我要刊登' : 'Sell'}</Link>
+        </div>
       </section>
     </div>
   );

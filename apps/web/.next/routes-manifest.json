@@ -46,6 +46,24 @@
       "regex": "^/database(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/database(?:/)?$"
+    },
+    {
+      "page": "/market",
+      "regex": "^/market(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/market(?:/)?$"
+    },
+    {
+      "page": "/market/manage",
+      "regex": "^/market/manage(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/market/manage(?:/)?$"
+    },
+    {
+      "page": "/market/new",
+      "regex": "^/market/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/market/new(?:/)?$"
     }
   ],
   "dataRoutes": [],
