@@ -32,3 +32,25 @@
 - service_role key 只存在 Vercel 伺服器端,瀏覽器永遠拿不到
 - listings 資料表開了 RLS 且無 policy → 任何人都無法繞過網站直連資料庫
 - 賣家管理碼(manage_token)只在刊登成功當下顯示一次,公開查詢永不回傳
+
+
+---
+
+# v2 追加設定(帳號 + 出價功能)
+
+## A. 跑第二個 SQL
+
+SQL Editor → New query → 貼上 `infra\database\migrations\003_accounts_offers.sql` → Run。
+
+## B. 關閉 email 驗證(讓玩家註冊完直接登入)
+
+Supabase → Authentication → Sign In / Up → Email → 把 **Confirm email** 關閉(OFF)→ Save。
+
+## C. Vercel 再加一個環境變數
+
+Supabase Project Settings → API 複製 **anon / public** key(這次是 anon 那串):
+
+- Key: `SUPABASE_ANON_KEY`
+- Value: anon public key
+
+加完 → Deployments → Redeploy。

@@ -1,6 +1,17 @@
 # PROJECT_STATUS.md
 
-更新：2026-08-10（session 1 續：市集刊登 + 漢化補丁整合完成）
+更新：2026-08-10（session 1 終：v2 — 帳號/出價/即時搜尋/明亮改版）
+
+## v2 ✅(程式碼完成,待 Will 三步設定後上線)
+
+- **玩家帳號**:email+密碼註冊登入(Supabase Auth);個人資料含遊戲ID/Discord/LINE/微信,**只在成交後互相顯示**。
+- **出價成交流**:買家「有意購買(照售價)」或「出價」→ 賣家在帳號頁接受/婉拒 → 接受即成交(刊登轉 RESERVED),雙方互見聯絡方式 → 遊戲內交易。買家可撤回;賣家可標售出/下架/重新上架。
+- **即時搜尋**:全站 as-you-type 建議下拉 + 清單即時過濾;簡體/繁體/英文皆可命中(OpenCC 產生 zh-CN 名稱,974 筆補丁譯名)。
+- **圖文並茂**:刊登可傳物品截圖(Supabase Storage),市集列表縮圖+詳情大圖。
+- **明亮質感改版**:暖象牙紙底、翡翠綠主色、琥珀金價格、襯線標題、「谷」印章 logo、卡片陰影細節——去 AI 感。
+- **中國可用性**:無 Google 字型/CDN 外掛,系統字型堆疊;建議之後掛自訂網域(vercel.app 在陸常被擋)。
+- **桌面工具 CI**:.github/workflows/desktop-build.yml — GitHub Actions 自動產 Windows 安裝檔(手動觸發或 tag desktop-v*),玩家/Will 不需裝任何開發工具。
+- **[Will 三步啟用]**:①跑 003 SQL ②Supabase 關 Confirm email ③Vercel 加 SUPABASE_ANON_KEY → push + redeploy(見 SUPABASE_SETUP.md v2 段)。
 
 ## 市集刊登 + 中英雙語 ✅（程式碼完成,待 Will 設定 Supabase 後啟用）
 
